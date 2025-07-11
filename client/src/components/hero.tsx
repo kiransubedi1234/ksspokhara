@@ -1,14 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { School, MapPin, Info, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Hero() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
+  const heroRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      const rect = document.querySelector('.hero-section')?.getBoundingClientRect();
-      if (rect) {
+      if (heroRef.current) {
+        const rect = heroRef.current.getBoundingClientRect();
         setMousePosition({
           x: ((e.clientX - rect.left) / rect.width) * 100,
           y: ((e.clientY - rect.top) / rect.height) * 100
@@ -16,7 +17,7 @@ export default function Hero() {
       }
     };
 
-    const heroSection = document.querySelector('.hero-section');
+    const heroSection = heroRef.current;
     if (heroSection) {
       heroSection.addEventListener('mousemove', handleMouseMove);
       return () => heroSection.removeEventListener('mousemove', handleMouseMove);
@@ -31,7 +32,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="hero-section relative bg-gradient-to-br from-school-blue-900 via-school-blue-800 to-school-blue-700 text-white overflow-hidden">
+    <section ref={heroRef} className="relative bg-gradient-to-br from-school-blue-900 via-school-blue-800 to-school-blue-700 text-white overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 bg-black bg-opacity-10"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-school-blue-900 opacity-50"></div>
