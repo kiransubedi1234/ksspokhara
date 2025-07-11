@@ -1,7 +1,28 @@
+import { useState, useEffect } from "react";
 import { School, MapPin, Info, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Hero() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = document.querySelector('.hero-section')?.getBoundingClientRect();
+      if (rect) {
+        setMousePosition({
+          x: ((e.clientX - rect.left) / rect.width) * 100,
+          y: ((e.clientY - rect.top) / rect.height) * 100
+        });
+      }
+    };
+
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) {
+      heroSection.addEventListener('mousemove', handleMouseMove);
+      return () => heroSection.removeEventListener('mousemove', handleMouseMove);
+    }
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -10,10 +31,26 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-school-blue-900 via-school-blue-800 to-school-blue-700 text-white overflow-hidden">
+    <section className="hero-section relative bg-gradient-to-br from-school-blue-900 via-school-blue-800 to-school-blue-700 text-white overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 bg-black bg-opacity-10"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-school-blue-900 opacity-50"></div>
+      
+      {/* Mouse following effect */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(255, 255, 255, 0.1) 0%, transparent 40%)`
+        }}
+      ></div>
+      
+      {/* Floating particles */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white bg-opacity-20 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-white bg-opacity-30 rounded-full animate-ping"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-white bg-opacity-25 rounded-full animate-pulse"></div>
+        <div className="absolute top-2/3 right-1/4 w-1 h-1 bg-white bg-opacity-20 rounded-full animate-ping"></div>
+      </div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 text-[#0079f2]">
         <div className="text-center">
           <div className="mb-8">
