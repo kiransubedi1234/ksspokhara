@@ -37,7 +37,6 @@ export default function Hero() {
       {/* Background pattern */}
       <div className="absolute inset-0 bg-black bg-opacity-10"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-school-blue-900 opacity-50"></div>
-      
       {/* Mouse following effect */}
       <div 
         className="absolute inset-0 pointer-events-none"
@@ -45,7 +44,6 @@ export default function Hero() {
           background: `radial-gradient(600px circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(255, 255, 255, 0.1) 0%, transparent 40%)`
         }}
       ></div>
-      
       {/* Floating particles */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white bg-opacity-20 rounded-full animate-pulse"></div>
@@ -53,7 +51,7 @@ export default function Hero() {
         <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-white bg-opacity-25 rounded-full animate-pulse"></div>
         <div className="absolute top-2/3 right-1/4 w-1 h-1 bg-white bg-opacity-20 rounded-full animate-ping"></div>
       </div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 text-[#0079f2]">
         <div className="text-center">
           <div 
             className="mb-8"
