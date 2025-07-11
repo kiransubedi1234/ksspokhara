@@ -10,8 +10,8 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-              alt="Modern school building exterior" 
+              src="/attached_assets/505228401_3050423228451309_7048848431356142769_n_1752255741622.jpg" 
+              alt="Kalika Secondary School building with students and staff" 
               className="rounded-2xl shadow-2xl w-full h-auto" 
             />
           </div>

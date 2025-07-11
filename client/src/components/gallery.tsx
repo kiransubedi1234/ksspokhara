@@ -1,9 +1,9 @@
 export default function Gallery() {
   const galleryItems = [
     {
-      image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      title: "Interactive Learning",
-      description: "Students actively participating in classroom discussions"
+      image: "/attached_assets/505228401_3050423228451309_7048848431356142769_n_1752255741622.jpg",
+      title: "School Community",
+      description: "Kalika Secondary School students and faculty together"
     },
     {
       image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",

@@ -33,8 +33,8 @@ export default function PrincipalMessage() {
           </div>
           <div className="order-1 lg:order-2">
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-              alt="Professional educator in formal attire" 
+              src="/attached_assets/505228401_3050423228451309_7048848431356142769_n_1752255741622.jpg" 
+              alt="Kalika Secondary School community" 
               className="rounded-2xl shadow-2xl w-full h-auto" 
             />
           </div>
