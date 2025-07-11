@@ -38,13 +38,15 @@ export default function Hero() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/attached_assets/505228401_3050423228451309_7048848431356142769_n_1752255925219.jpg)'
+          backgroundImage: 'url(/attached_assets/505228401_3050423228451309_7048848431356142769_n_1752255925219.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center'
         }}
       ></div>
       
       {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-school-blue-900/70 via-school-blue-800/60 to-school-blue-700/70"></div>
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-school-blue-900/50 via-school-blue-800/40 to-school-blue-700/50"></div>
+      <div className="absolute inset-0 bg-black/20"></div>
       {/* Mouse following effect */}
       <div 
         className="absolute inset-0 pointer-events-none"
@@ -121,7 +123,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               onClick={() => scrollToSection('about')}
-              className="bg-white text-school-blue-900 px-8 py-4 rounded-full font-semibold hover:bg-school-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-white px-8 py-4 rounded-full font-semibold hover:bg-school-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl text-[#0079f2]"
             >
               <Info className="mr-2" size={20} />
               Learn More
