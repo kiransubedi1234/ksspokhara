@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
+  const [hoveredElement, setHoveredElement] = useState<string | null>(null);
   const heroRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -54,29 +55,45 @@ export default function Hero() {
       </div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
         <div className="text-center">
-          <div className="mb-8">
+          <div 
+            className="mb-8"
+            onMouseEnter={() => setHoveredElement('icon')}
+            onMouseLeave={() => setHoveredElement(null)}
+          >
             <School 
-              className="text-6xl text-school-blue-200 mb-4 mx-auto transition-all duration-300 hover:scale-110" 
+              className="text-6xl text-school-blue-200 mb-4 mx-auto transition-all duration-300" 
               size={96}
               style={{
-                transform: `scale(${1 + (mousePosition.x - 50) * 0.001}) rotate(${(mousePosition.x - 50) * 0.1}deg)`
+                transform: hoveredElement === 'icon' 
+                  ? `scale(1.1) rotate(5deg)` 
+                  : 'scale(1) rotate(0deg)'
               }}
             />
           </div>
           <h1 
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight transition-all duration-300 text-white"
+            onMouseEnter={() => setHoveredElement('title')}
+            onMouseLeave={() => setHoveredElement(null)}
             style={{
-              transform: `translateY(${(mousePosition.y - 50) * -0.1}px) scale(${1 + Math.abs(mousePosition.x - 50) * 0.0005})`,
-              textShadow: `${(mousePosition.x - 50) * 0.05}px ${(mousePosition.y - 50) * 0.05}px 10px rgba(0,0,0,0.3)`
+              transform: hoveredElement === 'title' 
+                ? 'translateY(-10px) scale(1.05)' 
+                : 'translateY(0px) scale(1)',
+              textShadow: hoveredElement === 'title' 
+                ? '0px 5px 15px rgba(0,0,0,0.5)' 
+                : '0px 2px 5px rgba(0,0,0,0.2)'
             }}
           >
             Kalika Secondary School
           </h1>
           <p 
             className="text-xl md:text-2xl mb-4 text-school-blue-100 transition-all duration-300"
+            onMouseEnter={() => setHoveredElement('location')}
+            onMouseLeave={() => setHoveredElement(null)}
             style={{
-              transform: `translateX(${(mousePosition.x - 50) * 0.05}px) translateY(${(mousePosition.y - 50) * -0.05}px)`,
-              opacity: 0.8 + (Math.abs(mousePosition.x - 50) + Math.abs(mousePosition.y - 50)) * 0.002
+              transform: hoveredElement === 'location' 
+                ? 'translateY(-5px) scale(1.02)' 
+                : 'translateY(0px) scale(1)',
+              opacity: hoveredElement === 'location' ? 1 : 0.9
             }}
           >
             <MapPin className="inline mr-2" size={24} />
@@ -84,9 +101,13 @@ export default function Hero() {
           </p>
           <p 
             className="text-lg md:text-xl mb-8 text-school-blue-200 max-w-3xl mx-auto transition-all duration-300"
+            onMouseEnter={() => setHoveredElement('tagline')}
+            onMouseLeave={() => setHoveredElement(null)}
             style={{
-              transform: `translateY(${(mousePosition.y - 50) * 0.08}px) scale(${1 + Math.abs(mousePosition.y - 50) * 0.0003})`,
-              opacity: 0.9 + Math.abs(mousePosition.y - 50) * 0.001
+              transform: hoveredElement === 'tagline' 
+                ? 'translateY(-8px) scale(1.03)' 
+                : 'translateY(0px) scale(1)',
+              opacity: hoveredElement === 'tagline' ? 1 : 0.9
             }}
           >
             Nurturing Excellence Through Quality Education Since 1995
