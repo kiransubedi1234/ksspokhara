@@ -121,7 +121,8 @@ export default function Hero() {
             <Button
               onClick={() => scrollToSection('contact')}
               variant="outline"
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-school-blue-900 transition-all duration-300"
+              className="border-2 border-white text-white bg-transparent px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-school-blue-900 transition-all duration-300 opacity-100"
+              style={{ backgroundColor: 'transparent', borderColor: 'white', color: 'white' }}
             >
               <Phone className="mr-2" size={20} />
               Contact Us
