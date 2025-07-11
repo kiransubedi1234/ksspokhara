@@ -130,7 +130,7 @@ export default function Hero() {
             </Button>
             <Button
               onClick={() => scrollToSection('contact')}
-              className="bg-white text-school-blue-900 px-8 py-4 rounded-full font-semibold hover:bg-school-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-white px-8 py-4 rounded-full font-semibold hover:bg-school-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl text-[#0079f2]"
             >
               <Phone className="mr-2" size={20} />
               Contact Us
