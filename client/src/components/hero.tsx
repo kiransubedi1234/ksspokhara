@@ -69,7 +69,7 @@ export default function Hero() {
             />
           </div>
           <h1 
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight transition-all duration-300 text-white"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight transition-all duration-300 text-[#0079f2]"
             onMouseEnter={() => setHoveredElement('title')}
             onMouseLeave={() => setHoveredElement(null)}
             style={{
