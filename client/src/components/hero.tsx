@@ -1,0 +1,54 @@
+import { School, MapPin, Info, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export default function Hero() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <section className="relative bg-gradient-to-br from-school-blue-900 via-school-blue-800 to-school-blue-700 text-white overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-school-blue-900 opacity-50"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        <div className="text-center">
+          <div className="mb-8">
+            <School className="text-6xl text-school-blue-200 mb-4 mx-auto" size={96} />
+          </div>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            Kalika Secondary School
+          </h1>
+          <p className="text-xl md:text-2xl mb-4 text-school-blue-100">
+            <MapPin className="inline mr-2" size={24} />
+            Pokhara-10, Ram Bazar, Nepal
+          </p>
+          <p className="text-lg md:text-xl mb-8 text-school-blue-200 max-w-3xl mx-auto">
+            Nurturing Excellence Through Quality Education Since 1995
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              onClick={() => scrollToSection('about')}
+              className="bg-white text-school-blue-900 px-8 py-4 rounded-full font-semibold hover:bg-school-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              <Info className="mr-2" size={20} />
+              Learn More
+            </Button>
+            <Button
+              onClick={() => scrollToSection('contact')}
+              variant="outline"
+              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-school-blue-900 transition-all duration-300"
+            >
+              <Phone className="mr-2" size={20} />
+              Contact Us
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
