@@ -14,8 +14,7 @@ export default function Hero() {
       {/* Background pattern */}
       <div className="absolute inset-0 bg-black bg-opacity-10"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-school-blue-900 opacity-50"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 text-[#0079f2]">
         <div className="text-center">
           <div className="mb-8">
             <School className="text-6xl text-school-blue-200 mb-4 mx-auto" size={96} />
