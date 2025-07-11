@@ -31,13 +31,7 @@ export default function PrincipalMessage() {
               </div>
             </div>
           </div>
-          <div className="order-1 lg:order-2">
-            <img 
-              src="/attached_assets/505228401_3050423228451309_7048848431356142769_n_1752255741622.jpg" 
-              alt="Kalika Secondary School community" 
-              className="rounded-2xl shadow-2xl w-full h-auto" 
-            />
-          </div>
+          
         </div>
       </div>
     </section>
