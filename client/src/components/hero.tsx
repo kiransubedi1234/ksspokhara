@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { School, MapPin, Info, Phone } from "lucide-react";
+import { GraduationCap, MapPin, Info, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Hero() {
@@ -68,7 +68,7 @@ export default function Hero() {
             onMouseEnter={() => setHoveredElement('icon')}
             onMouseLeave={() => setHoveredElement(null)}
           >
-            <School 
+            <GraduationCap 
               className="text-6xl text-school-blue-200 mb-4 mx-auto transition-all duration-300" 
               size={96}
               style={{

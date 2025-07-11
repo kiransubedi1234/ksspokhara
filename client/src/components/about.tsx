@@ -9,11 +9,7 @@ export default function About() {
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <img 
-              src="/attached_assets/505228401_3050423228451309_7048848431356142769_n_1752255741622.jpg" 
-              alt="Kalika Secondary School building with students and staff" 
-              className="rounded-2xl shadow-2xl w-full h-auto" 
-            />
+            {/* Image removed as requested */}
           </div>
           <div>
             <h3 className="text-2xl font-semibold text-school-blue-800 mb-6">Excellence in Education</h3>
