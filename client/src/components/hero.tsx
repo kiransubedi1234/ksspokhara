@@ -33,10 +33,18 @@ export default function Hero() {
   };
 
   return (
-    <section ref={heroRef} className="relative bg-gradient-to-br from-school-blue-900 via-school-blue-800 to-school-blue-700 text-white overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 bg-black bg-opacity-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-school-blue-900 opacity-50"></div>
+    <section ref={heroRef} className="relative text-white overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/attached_assets/505228401_3050423228451309_7048848431356142769_n_1752255741622.jpg)'
+        }}
+      ></div>
+      
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-school-blue-900/90 via-school-blue-800/85 to-school-blue-700/80"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
       {/* Mouse following effect */}
       <div 
         className="absolute inset-0 pointer-events-none"
