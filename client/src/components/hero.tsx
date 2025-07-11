@@ -43,8 +43,8 @@ export default function Hero() {
       ></div>
       
       {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-school-blue-900/90 via-school-blue-800/85 to-school-blue-700/80"></div>
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-school-blue-900/70 via-school-blue-800/60 to-school-blue-700/70"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
       {/* Mouse following effect */}
       <div 
         className="absolute inset-0 pointer-events-none"
@@ -59,7 +59,7 @@ export default function Hero() {
         <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-white bg-opacity-25 rounded-full animate-pulse"></div>
         <div className="absolute top-2/3 right-1/4 w-1 h-1 bg-white bg-opacity-20 rounded-full animate-ping"></div>
       </div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 text-[#0079f2]">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
         <div className="text-center">
           <div 
             className="mb-8"
@@ -77,7 +77,7 @@ export default function Hero() {
             />
           </div>
           <h1 
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight transition-all duration-300 text-[#0079f2]"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight transition-all duration-300 text-white"
             onMouseEnter={() => setHoveredElement('title')}
             onMouseLeave={() => setHoveredElement(null)}
             style={{
