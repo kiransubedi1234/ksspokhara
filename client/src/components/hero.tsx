@@ -38,7 +38,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/attached_assets/505228401_3050423228451309_7048848431356142769_n_1752255741622.jpg)'
+          backgroundImage: 'url(/attached_assets/505228401_3050423228451309_7048848431356142769_n_1752255925219.jpg)'
         }}
       ></div>
       
