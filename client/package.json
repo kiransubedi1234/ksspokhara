@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.83.0",
     "autoprefixer": "^10.4.21",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
