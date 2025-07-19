@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "client/dist",
+    outDir: "dist",          // ✅ Changed from "client/dist" to "dist"
     emptyOutDir: true,
   },
   server: {
