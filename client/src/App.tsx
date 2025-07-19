@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
-import Science from "@/pages/Science";
+import Science from "@/pages/science";
 import Teachers from "@/pages/Teachers";
 import HotelManagement from "@/pages/HotelManagement";
 
