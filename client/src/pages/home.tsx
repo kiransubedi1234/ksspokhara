@@ -1,3 +1,4 @@
+import AdmissionPopup from "@/components/AdmissionPopup";
 import Navigation from "@/components/navigation";
 import Hero from "@/components/hero";
 import About from "@/components/about";
@@ -13,6 +14,7 @@ import ScrollToTop from "@/components/scroll-to-top";
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <AdmissionPopup />
       <Navigation />
       <Hero />
       <About />
@@ -20,7 +22,7 @@ export default function Home() {
       <PrincipalMessage />
       <Courses />
       <Gallery />
-      <NoticeBoard />
+      
       <Contact />
       <Footer />
       <ScrollToTop />

@@ -91,7 +91,7 @@ export default function Hero() {
                 : '0px 2px 5px rgba(0,0,0,0.2)'
             }}
           >
-            Kalika Secondary School
+            Kalika Model Secondary School
           </h1>
           <p 
             className="text-xl md:text-2xl mb-4 text-school-blue-100 transition-all duration-300"

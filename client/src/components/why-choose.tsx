@@ -29,8 +29,8 @@ export default function WhyChoose() {
     },
     {
       icon: Users,
-      title: "Small Class Sizes",
-      description: "Maximum 25 students per class ensuring personalized attention and better teacher-student interaction."
+      title: "Medium Class Sizes",
+      description: "Ideal number students per class ensuring personalized attention and better teacher-student interaction."
     }
   ];
 
@@ -41,7 +41,7 @@ export default function WhyChoose() {
           <h2 className="text-4xl md:text-5xl font-bold text-school-blue-900 mb-6">Why Choose Kalika?</h2>
           <div className="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Discover what makes Kalika Secondary School the preferred choice for quality education in Pokhara
+            Discover what makes Kalika Model Secondary School the preferred choice for quality education in Pokhara
           </p>
         </div>
         

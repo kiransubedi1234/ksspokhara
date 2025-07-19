@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GraduationCap, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -27,8 +27,12 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <GraduationCap className="text-school-blue-600 text-2xl mr-3" size={28} />
-            <span className="text-xl font-bold text-school-blue-900">Kalika Secondary School</span>
+            <img
+              src="/attached_assets/logo.svg"
+              alt="Kalika Model Secondary School Logo"
+              className="h-10 w-auto mr-3"
+            />
+            <span className="text-xl font-bold text-school-blue-900">Kalika Model Secondary School</span>
           </div>
           
           {/* Desktop Navigation */}

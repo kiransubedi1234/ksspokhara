@@ -1,8 +1,8 @@
-# Replit.md - Kalika Secondary School Website
+# Replit.md - Kalika Model Secondary School Website
 
 ## Overview
 
-This is a full-stack web application for Kalika Secondary School, a secondary school located in Pokhara-10, Ram Bazar, Nepal. The application is built as a modern school website showcasing the institution's information, courses, facilities, and contact details. It features a clean, professional design with smooth scrolling navigation and responsive layout.
+This is a full-stack web application for Kalika Model Secondary School, a secondary school located in Pokhara-10, Ram Bazar, Nepal. The application is built as a modern school website showcasing the institution's information, courses, facilities, and contact details. It features a clean, professional design with smooth scrolling navigation and responsive layout.
 
 ## User Preferences
 
