@@ -107,7 +107,7 @@ Preferred communication style: Simple, everyday language.
 ## Deployment Strategy
 
 ### Production Build
-- Frontend builds to `dist/public` directory
+- Frontend builds to `dist/` directory
 - Backend builds to `dist` directory with bundled dependencies
 - Static assets served from Express in production
 - Environment variables for database connection

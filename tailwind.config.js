@@ -1,6 +1,7 @@
-import type { Config } from "tailwindcss";
+// tailwind.config.js
+const defaultTheme = require("tailwindcss/defaultTheme");
 
-export default {
+module.exports = {
   darkMode: ["class"],
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -13,6 +14,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
         card: {
           DEFAULT: "var(--card)",
           foreground: "var(--card-foreground)",
@@ -41,9 +45,6 @@ export default {
           DEFAULT: "var(--destructive)",
           foreground: "var(--destructive-foreground)",
         },
-        border: "var(--border)",
-        input: "var(--input)",
-        ring: "var(--ring)",
         chart: {
           "1": "var(--chart-1)",
           "2": "var(--chart-2)",
@@ -64,27 +65,25 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+      },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
-} satisfies Config;
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+  ],
+};

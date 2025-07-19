@@ -1,3 +1,5 @@
+import campusImage from "@/assets/16.jpg";
+
 export default function About() {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -11,7 +13,7 @@ export default function About() {
           {/* Left Column: Image */}
           <div className="order-1 lg:order-1 flex justify-center">
             <img
-              src="/attached_assets/16.jpg"
+              src={campusImage}
               alt="Kalika Model Secondary School Campus"
               className="rounded-2xl w-[70%] h-auto object-cover shadow-lg"
             />
@@ -21,10 +23,14 @@ export default function About() {
           <div className="order-2 lg:order-2">
             <h3 className="text-2xl font-semibold text-school-blue-800 mb-6">Excellence in Education</h3>
             <p className="text-lg leading-relaxed mb-6 text-slate-600">
-              Kalika Model Secondary School, located in the heart of Pokhara-10, Ram Bazar, is committed to providing quality education rooted in discipline, innovation, and inclusiveness. Our experienced faculty and supportive environment nurture academic excellence and moral development from early grades to secondary level.
+              Kalika Model Secondary School, located in the heart of Pokhara-10, Ram Bazar, is committed to providing
+              quality education rooted in discipline, innovation, and inclusiveness. Our experienced faculty and
+              supportive environment nurture academic excellence and moral development from early grades to secondary
+              level.
             </p>
             <p className="text-lg leading-relaxed mb-8 text-slate-600">
-              With over 25 years of educational excellence, we have been shaping young minds and preparing them for a successful future through comprehensive academic programs and character development.
+              With over 25 years of educational excellence, we have been shaping young minds and preparing them for a
+              successful future through comprehensive academic programs and character development.
             </p>
             <div className="grid grid-cols-3 gap-6 text-center">
               <div className="p-4 bg-school-blue-50 rounded-xl">

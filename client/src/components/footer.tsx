@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail } from "lucide-react";
+import logoUrl from "@/assets/logo.svg";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -12,11 +13,12 @@ export default function Footer() {
     <footer className="bg-school-blue-50 text-school-blue-900 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8">
+          {/* Branding */}
           <div className="col-span-2">
             <div className="flex items-center mb-4">
               <img
-                src="/attached_assets/logo.svg"
-                alt="Kalika Model Secondary School Logo"
+                src={logoUrl}
+                alt="Kalika Logo"
                 className="h-12 w-auto mr-3"
               />
               <span className="text-2xl font-bold">
@@ -35,48 +37,27 @@ export default function Footer() {
               >
                 <i className="fab fa-facebook-f text-xl"></i>
               </a>
-              {/* Removed YouTube and WhatsApp icons */}
             </div>
           </div>
 
+          {/* Navigation */}
           <div>
             <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2 text-school-blue-700">
-              <li>
-                <button
-                  onClick={() => scrollToSection("about")}
-                  className="hover:text-school-blue-900 transition-colors"
-                >
-                  About Us
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("courses")}
-                  className="hover:text-school-blue-900 transition-colors"
-                >
-                  Courses
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("gallery")}
-                  className="hover:text-school-blue-900 transition-colors"
-                >
-                  Gallery
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("contact")}
-                  className="hover:text-school-blue-900 transition-colors"
-                >
-                  Contact
-                </button>
-              </li>
+              {["about", "courses", "gallery", "contact"].map((section) => (
+                <li key={section}>
+                  <button
+                    onClick={() => scrollToSection(section)}
+                    className="hover:text-school-blue-900 transition-colors"
+                  >
+                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* Contact Info */}
           <div>
             <h4 className="font-semibold text-lg mb-4">Contact Info</h4>
             <ul className="space-y-2 text-school-blue-700">
@@ -96,11 +77,15 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Footer Note */}
         <div className="border-t border-school-blue-200 mt-8 pt-8 text-center text-school-blue-600">
           <p>
             &copy; 2025 Kalika Model Secondary School. All Rights Reserved. | Designed with Excellence
           </p>
-          <p>  &copy; Developed by subedikiran105@gmail.com </p>
+          <p>
+            &copy; Developed by{" "}
+            <a href="mailto:subedikiran105@gmail.com">subedikiran105@gmail.com</a>
+          </p>
         </div>
       </div>
     </footer>
