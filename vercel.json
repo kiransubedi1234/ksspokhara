@@ -1,10 +1,14 @@
 {
-  "rootDirectory": "client",
   "builds": [
     {
       "src": "client/package.json",
       "use": "@vercel/static-build"
     }
   ],
-  "outputDirectory": "client/dist"
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "client/dist/index.html"
+    }
+  ]
 }
