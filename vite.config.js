@@ -4,19 +4,21 @@ import react from "@vitejs/plugin-react";
 import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
-  root: "client",
   plugins: [react(), svgr()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "client/src"),
+      "@": path.resolve(__dirname, "src"),
     },
   },
   build: {
-    outDir: "dist",          // ✅ Changed from "client/dist" to "dist"
+    outDir: "dist",
     emptyOutDir: true,
   },
   server: {
     port: 5173,
     open: true,
+  },
+  css: {
+    postcss: path.resolve(__dirname, "postcss.config.js"),
   },
 });
