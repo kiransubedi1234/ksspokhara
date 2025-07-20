@@ -18,9 +18,10 @@ export default function Home() {
       <main className="space-y-24 pt-20 bg-white">
         <Hero />
         <About />
+        <PrincipalMessage />
         <Courses />
         <Gallery />
-        <PrincipalMessage />
+        
         <Contact />
       </main>
       <Footer />
