@@ -9,6 +9,7 @@ import Courses from "@/components/courses";
 import Gallery from "@/components/gallery";
 import PrincipalMessage from "@/components/principal-message";
 import Contact from "@/components/contact";
+import Why from "@/components/why-choose";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <main className="space-y-24 pt-20 bg-white">
         <Hero />
         <About />
+      `<Why />`
         <PrincipalMessage />
         <Courses />
         <Gallery />

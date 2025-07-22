@@ -4,3 +4,4 @@ dist
 server/
 vite.config.ts.*
 *.tar.gz
+.vercel
